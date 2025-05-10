@@ -7,7 +7,8 @@ export const Publications = ({ publications }) => {
     <div className='publications-container'>
       {publications.map((p) => (
         <PublicationCard
-          key={p.id || p.createdAt}
+          key={p.pid || p.id || p.createdAt}
+          pid={p.pid || p.id}
           title={p.title}
           content={p.content}
           course={p.course}

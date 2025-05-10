@@ -1,11 +1,16 @@
 import React from 'react'
 import { DashboardPage } from './pages/dashboard'
-import { BrowserRouter as Routes } from 'react-router-dom'
+import { PublicationDetail } from './components/publications/PublicationDetail'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 const App = () => {
   return (
-    <Routes>
-      <DashboardPage />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path='/' element={<DashboardPage />} />
+        <Route path='/publications/:id' element={<PublicationDetail />} />
+      </Routes>
+    </Router>
   )
 }
 

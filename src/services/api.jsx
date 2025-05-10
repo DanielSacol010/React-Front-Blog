@@ -15,4 +15,15 @@ export const getPublications = async () => {
             e,
         };
     }
-}    
+}
+
+export const getPublicationById = async (pid) => {
+    try {
+        return await apiClient.get(`/publications/listById/${pid}`);
+    } catch (e) {
+        return {
+            error: true,
+            e,
+        };
+    }
+}
