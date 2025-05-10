@@ -1,15 +1,9 @@
 import React from 'react'
-import { Publications } from '../../components/publications/Publications'
-import { usePublications } from '../../shared/hooks/usePublications'
+import Content from '../../components/dashboard/content.jsx'
 import './dashBoardPage.css'
 
-export const DashboardPage = () => {
-  const { allPublications } = usePublications()
-
-  return (
-    <div className='dashboard-container'>
-      <div className='dashboard-background'/>
-      <Publications publications={allPublications} />
-    </div>
-  )
+const DashboardPage = () => {
+  return <Content />
 }
+
+export default DashboardPage

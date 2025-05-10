@@ -15,6 +15,8 @@ function PublicationDetail() {
   if (isFetching) return <div>Cargando publicación...</div>;
   if (!publication) return <div>No se encontró la publicación.</div>;
 
+  const comments = publication.comments || [];
+
   return (
     <div className="publication-detail-container">
       <h2>{publication.title}</h2>
@@ -25,19 +27,21 @@ function PublicationDetail() {
       <div className="publication-detail-content">{publication.content}</div>
       <div className="publication-detail-comments">
         <h3>Comentarios</h3>
-        {publication.comments && publication.comments.length > 0 ? (
+        {comments.length === 0 ? (
+          <p>No hay comentarios aún.</p>
+        ) : (
           <ul>
-            {publication.comments.map((c) => (
-              <li key={c._id}>
-                <strong>{c.username}:</strong> {c.content}
-                <div className="publication-detail-comment-date">
-                  {new Date(c.createdAt).toLocaleString('es-ES')}
+            {comments.map((comment) => (
+              <li key={comment._id} className="publication-comment">
+                <div className="publication-comment-header">
+                  <span className="publication-comment-username">{comment.username}</span>
+                  <span className="publication-comment-separator"> | </span>
+                  <span className="publication-comment-date">{new Date(comment.createdAt).toLocaleString('es-ES')}</span>
                 </div>
+                <div className="publication-comment-content">{comment.content}</div>
               </li>
             ))}
           </ul>
-        ) : (
-          <span>No hay comentarios.</span>
         )}
         <AddComment publicationId={id} onCommentAdded={() => fetchPublication(id)} />
       </div>

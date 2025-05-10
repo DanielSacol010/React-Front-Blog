@@ -1,17 +1,17 @@
-import React from 'react'
-import { DashboardPage } from './pages/dashboard'
-import { PublicationDetail } from './components/publications/PublicationDetail'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React from "react";
+import { useRoutes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import { routes } from "./routes.jsx";
 
-const App = () => {
+function App() {
+  let element = useRoutes(routes);
+
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<DashboardPage />} />
-        <Route path='/publications/:id' element={<PublicationDetail />} />
-      </Routes>
-    </Router>
-  )
+    <div>
+      {element}
+      <Toaster position="top-center" reverseOrder={false} />
+    </div>
+  );
 }
 
-export default App
+export default App;

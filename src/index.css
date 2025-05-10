@@ -8,12 +8,9 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  /* Estos colores son del tema oscuro por defecto de Vite, ajústalos si es necesario */
   color: rgba(255, 255, 255, 0.87); 
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,8 +24,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Eliminamos display: flex y place-items: center para un layout más tradicional */
-  /* min-width: 320px; */ /* Puedes mantenerlo si es necesario para tu diseño */
   min-height: 100vh;
 }
 
@@ -38,7 +33,7 @@ a {
 }
 
 h1 {
-  font-size: 2.5em; /* Ajustado para ser un poco menos grande que el 3.2em original */
+  font-size: 2.5em;
   line-height: 1.1;
 }
 
@@ -49,13 +44,9 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  /* background-color: #1a1a1a; */ /* Se manejará en global.css o por :root */
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
-/* button:hover { */
-  /* border-color: #646cff; */ /* Se manejará en global.css o por :root */
-/* } */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -67,7 +58,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #0b336b; /* Tomado de Kinal-Cast para el tema claro */
+    color: #0b336b;
   }
   button {
     background-color: #f9f9f9;

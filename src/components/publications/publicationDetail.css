@@ -43,6 +43,24 @@
   color: #222;
 }
 
+.publication-comment-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.publication-comment-username {
+  color: #222;
+}
+
+.publication-comment-date {
+  color: #666;
+  font-size: 0.95em;
+}
+
 .publication-detail-comment-date {
   font-size: 0.9em;
   color: #888;

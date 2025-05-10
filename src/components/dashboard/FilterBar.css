@@ -1,0 +1,48 @@
+.filter-bar {
+  max-width: 700px;
+  margin: 20px auto 10px auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-bar-label {
+  font-weight: 500;
+  color: #222;
+}
+
+.filter-bar-select {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.filter-bar-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-bar-btn-order {
+  background: #0b336b;
+  color: #fff;
+}
+
+.filter-bar-btn-order:hover {
+  background: #174a8c;
+}
+
+.filter-bar-btn-clear {
+  background: #888;
+  color: #fff;
+}
+
+.filter-bar-btn-clear:hover {
+  background: #555;
+}
