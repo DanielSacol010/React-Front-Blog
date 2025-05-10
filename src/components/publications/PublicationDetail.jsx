@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { usePublicationDetail } from '../../shared/hooks/usePublicationDetail';
+import { AddComment } from '../comments/AddComment';
 import './publicationDetail.css';
 
 function PublicationDetail() {
@@ -38,6 +39,7 @@ function PublicationDetail() {
         ) : (
           <span>No hay comentarios.</span>
         )}
+        <AddComment publicationId={id} onCommentAdded={() => fetchPublication(id)} />
       </div>
     </div>
   );

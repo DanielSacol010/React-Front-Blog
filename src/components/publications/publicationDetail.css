@@ -47,3 +47,47 @@
   font-size: 0.9em;
   color: #888;
 }
+
+.publication-comment-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.publication-comment-form input,
+.publication-comment-form textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.publication-comment-form button {
+  width: 150px;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background: #0b336b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.publication-comment-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.publication-comment-error {
+  color: #c00;
+  font-size: 0.95em;
+  margin-top: 0.5rem;
+}

@@ -27,3 +27,14 @@ export const getPublicationById = async (pid) => {
         };
     }
 }
+
+export const createComment = async (comment) => {
+    try {
+        return await apiClient.post('/comments/create', comment);
+    } catch (e) {
+        return {
+            error: true,
+            e,
+        };
+    }
+}
