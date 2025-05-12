@@ -1,0 +1,116 @@
+/* publicationDetail.css */
+.publication-detail-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.publication-detail-title,
+.publication-detail-container h2 {
+  color: #111;
+}
+
+.publication-detail-meta {
+  color: #4a5568;
+  font-size: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.publication-detail-content {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.publication-detail-comments {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #222;
+}
+
+.publication-detail-comments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.publication-detail-comments li {
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  color: #222;
+}
+
+.publication-comment-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.publication-comment-username {
+  color: #222;
+}
+
+.publication-comment-date {
+  color: #666;
+  font-size: 0.95em;
+}
+
+.publication-detail-comment-date {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.publication-comment-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.publication-comment-form input,
+.publication-comment-form textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.publication-comment-form button {
+  width: 150px;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background: #0b336b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.publication-comment-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.publication-comment-error {
+  color: #c00;
+  font-size: 0.95em;
+  margin-top: 0.5rem;
+}
